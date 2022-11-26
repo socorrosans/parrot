@@ -1,3 +1,5 @@
+@import "../../styles/colors.css";
+
 .container {
   max-width: 1500px;
   margin-inline: auto;
@@ -19,7 +21,7 @@ header {
 ul {
   display: flex;
   align-items: center;
-  color: #76BB4C;
+  color: var(--p-color);
   font-size: 1.5rem;
   list-style-type: none;
   column-gap: 10px;
@@ -27,11 +29,11 @@ ul {
 
 li:first-child {
   padding-right: 10px;
-  border-right: 2px solid #76BB4C;
+  border-right: 2px solid var(--p-color);
 }
 
 li:last-child {
-  color: #6033AA;
+  color: var(--s-color);
   font-size: 1rem;
 }
 
