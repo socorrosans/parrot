@@ -3,11 +3,11 @@ import "./header.css";
 export default function Header(){
   return (
     <div className="box-shadow">
-      <header className="container">
+      <header className="container-h">
         <div>
           <img src={logo} alt="Logo da Parrot" />
         </div>
-        <ul>
+        <ul className="ul-h">
           <li>Olá, usuário</li>
           <li>Sair</li>
         </ul>

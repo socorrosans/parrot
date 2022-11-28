@@ -1,6 +1,6 @@
 @import "../../styles/colors.css";
 
-.container {
+.container-h {
   max-width: 1500px;
   margin-inline: auto;
 }
@@ -18,7 +18,7 @@ header {
   padding: 20px;
 }
 
-ul {
+.ul-h {
   display: flex;
   align-items: center;
   color: var(--p-color);
@@ -27,12 +27,12 @@ ul {
   column-gap: 10px;
 }
 
-li:first-child {
+.ul-h li:first-child {
   padding-right: 10px;
   border-right: 2px solid var(--p-color);
 }
 
-li:last-child {
+.ul-h li:last-child {
   color: var(--s-color);
   font-size: 1rem;
 }
