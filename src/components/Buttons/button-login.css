@@ -14,3 +14,9 @@
   background-color: var(--p-v-color);
   transition: .3s;
 }
+
+@media (max-width: 450px){
+  .btnLogin {
+    font-size: 1.25rem;
+  }
+}
