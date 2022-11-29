@@ -1,7 +1,7 @@
 import "./container-main.css";
 
 type Props = {
-  children: JSX.Element
+  children: JSX.Element[]
 }
 
 export default function ContainerMain(props: Props){
