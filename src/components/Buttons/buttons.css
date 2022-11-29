@@ -1,5 +1,20 @@
 @import "../../styles/colors.css";
 
+.btnProfile {
+  color: #ffffff;
+  font-size: 1rem;
+  background-color: var(--p-color);
+  padding: 7px 20px;
+  border-radius: 30px;
+  border: none;
+}
+
+.btnProfile:hover {
+  color: #f7f7f7;
+  background-color: var(--p-v-color);
+  transition: .3s;
+}
+
 .btnLogin {
   color: #ffffff;
   font-size: 1.5rem;
