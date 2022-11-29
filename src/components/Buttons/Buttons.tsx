@@ -2,7 +2,6 @@ import "./buttons.css";
 
 interface PropsButton {
   name: string
-  bgcolor?: string,
 }
 
 export function ButtonProfile(props : PropsButton){

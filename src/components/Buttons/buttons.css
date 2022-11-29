@@ -1,4 +1,4 @@
-@import "../../styles/colors.css";
+@import "../../css/colors.css";
 
 .btnProfile {
   color: #ffffff;
@@ -10,7 +10,6 @@
 }
 
 .btnProfile:hover {
-  color: #f7f7f7;
   background-color: var(--p-v-color);
   transition: .3s;
 }
@@ -25,7 +24,6 @@
 }
 
 .btnLogin:hover {
-  color: #f7f7f7;
   background-color: var(--p-v-color);
   transition: .3s;
 }

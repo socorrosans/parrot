@@ -1,0 +1,23 @@
+@import "../../css/colors.css";
+
+.post-area {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 40px 30px 30px;
+  column-gap: 30px;
+  row-gap: 15px;
+  border-bottom: 2px solid #C5C5C5;
+}
+
+.post-area textarea {
+  border: 1px solid var(--p-color);
+  border-radius: 10px;
+  resize: none;
+}
+
+.post-area button {
+  grid-column: 2;
+  background-color: var(--s-color);
+  padding-inline: 35px;
+  justify-self: end;
+}

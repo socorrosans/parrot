@@ -1,5 +1,5 @@
 import Background from "../../components/Background/Background";
-import ButtonLogin from "../../components/Buttons/ButtonLogin";
+import { ButtonLogin } from "../../components/Buttons/Buttons";
 import logo from "../../assets/img/logo-box.png";
 import "./login.css";
 
