@@ -1,6 +1,6 @@
 import Background from "../../components/Background/Background";
 import { ButtonLogin } from "../../components/Buttons/Buttons";
-import logo from "../../assets/img/logo-box.png";
+import logo from "../../assets/images/general/logo-box.png";
 import "./login.css";
 
 export default function Login(){
@@ -12,10 +12,11 @@ export default function Login(){
         </div>
 
         <h1>LOGIN</h1>
-        <input type="email" placeholder="email" />
-        <input type="password" placeholder="senha" />
-        <ButtonLogin />
-
+        <form>
+          <input type="email" placeholder="email" />
+          <input type="password" placeholder="senha" />
+          <ButtonLogin />
+        </form>
         <a href="/cadastrar">cadastre-se</a>
       </section>
     </Background>

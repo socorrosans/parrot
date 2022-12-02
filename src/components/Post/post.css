@@ -5,7 +5,7 @@
   grid-template-columns: auto 1fr;
   padding: 40px 30px 45px;
   column-gap: 30px;
-  border-bottom: 1px solid #C5C5C5;
+  border-bottom: 1px solid var(--p-details);
 }
 
 .info-user h1 {
@@ -15,7 +15,7 @@
 }
 
 .info-user span {
-  color: #909090;
+  color: var(--s-details);
   font-size: 1rem;
   font-weight: 400;
 }

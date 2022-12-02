@@ -6,12 +6,12 @@ interface PropsButton {
 
 export function ButtonProfile(props : PropsButton){
   return (
-    <button className="btnProfile">{props.name}</button>
+    <button className="btnProfile" type="submit">{props.name}</button>
   )
 }
 
 export function ButtonLogin(){
   return(
-    <button className="btnLogin">entrar</button>
+    <button className="btnLogin" type="submit">entrar</button>
   )
 }

@@ -1,3 +1,5 @@
+@import "../../css/colors.css";
+
 .container {
   width: 450px;
   box-sizing: border-box;
@@ -9,11 +11,17 @@
   gap: 30px;
 }
 
-input {
-  color: #909090;
+.container button {
+  width: 100%;
+}
+
+.container input {
+  width: 100%;
+  color: var(--s-details);
   font-size: 1.5rem;
   outline: none;
-  border: 1px solid #909090;
+  margin-bottom: 30px;
+  border: 1px solid var(--s-details);
   border-radius: 10px;
 }
 
@@ -26,23 +34,23 @@ input:focus, input:focus{
   text-align: center;
 }
 
-h1 {
+.container h1 {
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-a {
+.container a {
   box-sizing: border-box;
-  color: #555555;
+  color: var(--s-details);
   font-size: 1.125rem;
   text-decoration: none;
   border-bottom: 1px solid #ffffff;
   align-self: center;
 }
 
-a:hover {
-  color: #6033AA;
-  border-bottom: 1px solid #6033AA;
+.container a:hover {
+  color: var(--s-color);
+  border-bottom: 1px solid var(--s-color);
   transition: .3s;
 }
 
