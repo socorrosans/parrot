@@ -1,5 +1,5 @@
-import User1 from "../../assets/images/img-users/user1.png";
-import "./post.css";
+import User1 from '../../assets/images/img-users/user1.png';
+import './post.css';
 
 export default function Post(){
   return(

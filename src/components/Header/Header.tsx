@@ -1,5 +1,5 @@
-import logo from "../../assets/images/general/logo-parrot.png";
-import "./header.css";
+import logo from '../../assets/images/general/logo-parrot.png';
+import './header.css';
 
 export default function Header(){
   return (

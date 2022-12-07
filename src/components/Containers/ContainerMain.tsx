@@ -1,4 +1,4 @@
-import "./container-main.css";
+import './container-main.css';
 
 type Props = {
   children: JSX.Element[]

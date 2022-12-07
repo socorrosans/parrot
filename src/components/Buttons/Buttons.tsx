@@ -1,4 +1,4 @@
-import "./buttons.css";
+import './buttons.css';
 
 interface PropsButton {
   name: string

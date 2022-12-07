@@ -1,9 +1,9 @@
-import ContainerMain from "../../components/Containers/ContainerMain";
-import Header from "../../components/Header/Header";
-import User1 from "../../assets/images/img-users/user1.png";
-import { ButtonProfile } from "../../components/Buttons/Buttons";
-import "./feed.css";
-import Post from "../../components/Post/Post";
+import ContainerMain from '../../components/Containers/ContainerMain';
+import Header from '../../components/Header/Header';
+import User1 from '../../assets/images/img-users/user1.png';
+import { ButtonProfile } from '../../components/Buttons/Buttons';
+import './feed.css';
+import Post from '../../components/Post/Post';
 
 export default function Feed(){
   return(

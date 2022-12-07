@@ -1,7 +1,7 @@
-import Background from "../../components/Background/Background";
-import { ButtonLogin } from "../../components/Buttons/Buttons";
-import logo from "../../assets/images/general/logo-box.png";
-import "../Login/login.css";
+import Background from '../../components/Background/Background';
+import { ButtonLogin } from '../../components/Buttons/Buttons';
+import logo from '../../assets/images/general/logo-box.png';
+import '../Login/login.css';
 
 export default function Register(){
   return (
@@ -13,12 +13,12 @@ export default function Register(){
 
         <h1>CADASTRO</h1>
         <form>
-          <input type="email" placeholder="nome" />
-          <input type="password" placeholder="email" />
+          <input type="text" placeholder="nome" />
+          <input type="email" placeholder="email" />
           <input type="password" placeholder="senha" />
           <input type="password" placeholder="confirmar senha" />
-          <input type="password" placeholder="apartamento" />
-          <input type="password" placeholder="link da foto" />
+          <input type="text" placeholder="apartamento" />
+          <input type="text" placeholder="link da foto" />
           <ButtonLogin />
         </form>
       </section>
