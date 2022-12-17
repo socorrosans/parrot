@@ -1,4 +1,4 @@
-@import "../../css/colors.css";
+@import "../../assets/css/colors.css";
 
 .container {
   width: 450px;
@@ -52,6 +52,10 @@ input:focus, input:focus{
   color: var(--s-color);
   border-bottom: 1px solid var(--s-color);
   transition: .3s;
+}
+
+.container p {
+  color: #d30000;
 }
 
 @media (max-width: 450px){

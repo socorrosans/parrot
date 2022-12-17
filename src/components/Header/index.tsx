@@ -1,4 +1,4 @@
-import logo from '../../assets/images/general/logo-parrot.png';
+import logo from '../../assets/images/logo-parrot.png';
 import './header.css';
 
 export default function Header(){

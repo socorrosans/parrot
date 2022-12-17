@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../../assets/images/general/background.png") no-repeat center/cover;
+  background: url("../../assets/images/background.png") no-repeat center/cover;
 }
 
 .bg::before {

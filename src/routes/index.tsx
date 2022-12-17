@@ -1,7 +1,7 @@
 import {createBrowserRouter} from 'react-router-dom';
-import Feed from '../pages/Feed/Feed';
-import Login from '../pages/Login/Login';
-import Register from '../pages/Register/Register';
+import Feed from '../pages/Feed';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
 
 export const router = createBrowserRouter([
   {

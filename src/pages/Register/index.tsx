@@ -1,6 +1,6 @@
-import Background from '../../components/Background/Background';
-import { ButtonLogin } from '../../components/Buttons/Buttons';
-import logo from '../../assets/images/general/logo-box.png';
+import Background from '../../components/Background';
+import { ButtonLogin } from '../../components/Buttons';
+import logo from '../../assets/images/logo-box.png';
 import '../Login/login.css';
 
 export default function Register(){
