@@ -10,6 +10,7 @@
 }
 
 .post-area textarea {
+  padding: 10px;
   border: 1px solid var(--p-color);
   border-radius: 10px;
   resize: none;

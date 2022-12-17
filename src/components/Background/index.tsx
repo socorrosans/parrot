@@ -4,10 +4,10 @@ type Props = {
   children: JSX.Element
 }
 
-export default function Background(props: Props){
+export default function Background(p: Props){
   return (
     <div className="bg">
-      {props.children}
+      {p.children}
     </div>
   )
 }

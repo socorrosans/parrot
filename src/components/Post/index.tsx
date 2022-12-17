@@ -1,14 +1,24 @@
-import User1 from '../../assets/images/user1.png';
+import userPic from '../../assets/images/user.png';
 import './post.css';
 
-export default function Post(){
+
+interface PropsPost {
+  owner: string,
+  post: string,
+  apartment: string,
+  created: string,
+}
+
+// const formatDate = "10/06/2022 09:00"
+
+export default function Post(p: PropsPost){
   return(
     <div className="post">
-      <img src={User1} alt="Foto de perfil do usuário" />
+      <img src={userPic} alt="Foto de perfil do usuário" />
       <div className="info-user">
-        <h1>Vinícius - apê 42</h1>
-        <span>10/06/2022 09:00</span>
-        <p>Poxa galera, vamos respeitar o horário de silêncio! Tinha alguém usando furadeira 2 HORAS DA MANHÃ!!! ó_ó</p>
+        <h1>{`${p.owner} - apê ${p.apartment}`}</h1>
+        <span>{`${p.created}`}</span>
+        <p>{`${p.post}`}</p>
       </div>
     </div>
   )

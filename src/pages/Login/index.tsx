@@ -3,7 +3,6 @@ import { ButtonLogin } from '../../components/Buttons';
 import logo from '../../assets/images/logo-box.png';
 import { FormEvent, useState } from 'react';
 import { api } from '../../services/API';
-import AuthContext from '../../components/AuthContext';
 import './login.css';
 
 export default function Login(){
@@ -12,7 +11,7 @@ export default function Login(){
   const [password, setPassword] = useState("");
   const [token, setToken] = useState(null);
   const [authUser, setAuthUser] = useState(null);
-
+ 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
     await api.post('/login', {
@@ -25,6 +24,8 @@ export default function Login(){
     })
     .then(r => {
       setToken(r.data)
+      localStorage.token = token
+      if(token != null) window.location.href = "/feed"
     })
     .catch(e => {
       setAuthUser(e.response.data)
@@ -32,7 +33,6 @@ export default function Login(){
   }
   
   return(
-    <AuthContext.Provider value={{token: token}}>
       <Background>
         <section className="container">
           <div>
@@ -49,6 +49,5 @@ export default function Login(){
           <a href="/cadastrar">cadastre-se</a>
         </section>
       </Background>
-    </AuthContext.Provider>
   )
 }

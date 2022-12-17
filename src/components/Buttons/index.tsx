@@ -2,11 +2,12 @@ import './buttons.css';
 
 interface PropsButton {
   name: string
+  onclick?: any
 }
 
-export function ButtonProfile(props : PropsButton){
+export function ButtonProfile(p : PropsButton){
   return (
-    <button className="btnProfile" type="submit">{props.name}</button>
+    <button className="btnProfile" type="submit" onClick={p.onclick}>{p.name}</button>
   )
 }
 
