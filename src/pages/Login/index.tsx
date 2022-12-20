@@ -13,7 +13,7 @@ export default function Login(){
   const [authUser, setAuthUser] = useState(null);
  
   async function handleSubmit(e: FormEvent) {
-    e.preventDefault()
+    e.preventDefault();
     await api.post('/login', {
       email,
       password
