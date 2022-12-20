@@ -1,7 +1,7 @@
 import './buttons.css';
 
 interface PropsButton {
-  name: string
+  name?: string
   onclick?: any
 }
 

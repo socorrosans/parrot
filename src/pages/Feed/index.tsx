@@ -30,9 +30,7 @@ export default function Feed(){
       .then(r => {
         if (typeof r.data == "string") {setEmptyPosts(r.data)}
           else {setPosts(r.data)}
-      }).catch(e => {
-        console.log(e)
-      })
+      }).catch(e => console.log(e))
   }, [])
 
   async function handleClick(){
@@ -42,12 +40,12 @@ export default function Feed(){
       headers: {
         "Content-Type": "application/json; charset=utf-8",
         "Authorization": localStorage.token,
-    }})
+    }}).then(r => setText("")).catch(e => console.log(e))
   }
 
   return(
     <>
-      <Header/>
+      <Header user={localStorage.user}/>
       <ContainerMain>
         <div className="post-area">
           <img src={userPic} alt="Foto de perfil do usuário" />

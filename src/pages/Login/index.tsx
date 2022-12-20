@@ -23,8 +23,9 @@ export default function Login(){
       }
     })
     .then(r => {
-      setToken(r.data)
+      setToken(r.data.token)
       localStorage.token = token
+      localStorage.user = r.data.user
       if(token != null) window.location.href = "/feed"
     })
     .catch(e => {

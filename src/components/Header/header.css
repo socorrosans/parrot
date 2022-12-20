@@ -18,10 +18,14 @@
   padding: 20px;
 }
 
+.header a {
+  text-decoration: none;
+  color: var(--p-color);
+}
+
 .ul-h {
   display: flex;
   align-items: center;
-  color: var(--p-color);
   font-size: 1.5rem;
   list-style-type: none;
   column-gap: 10px;
@@ -33,8 +37,11 @@
 }
 
 .ul-h li:last-child {
-  color: var(--s-color);
   font-size: 1rem;
+}
+
+.ul-h li:last-child a {
+  color: var(--s-color);
 }
 
 @media (max-width: 460px){
