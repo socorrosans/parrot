@@ -11,10 +11,10 @@ export default function Header(p: LoggedUser){
     <div className="header-bg">
       <header className="header container-h">
         <div>
-          <img src={logo} alt="Logo da Parrot" />
+          <a href="/feed"><img src={logo} alt="Logo da Parrot" /></a>
         </div>
         <ul className="ul-h">
-          <li><a href="">{`Olá, ${p.user}`}</a></li>
+          <li><a href="/user">{`Olá, ${p.user}`}</a></li>
           <li><a href="/" onClick={()=> localStorage.clear()}>Sair</a></li>
         </ul>
       </header>

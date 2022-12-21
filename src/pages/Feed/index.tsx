@@ -28,7 +28,7 @@ export default function Feed(){
       }
     })
       .then(r => {
-        if (typeof r.data == "string") {setEmptyPosts(r.data)}
+        if (typeof r.data == typeof "") {setEmptyPosts(r.data)}
           else {setPosts(r.data)}
       }).catch(e => console.log(e))
   }, [])

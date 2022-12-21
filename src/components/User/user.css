@@ -1,0 +1,29 @@
+@import "../../assets/css/colors.css";
+
+.user {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 40px 30px 45px;
+  column-gap: 30px;
+  border-bottom: 1px solid var(--p-details);
+}
+
+.u-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.u-info h1 {
+  color: var(--p-color);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.u-info span {
+  font-size: 1rem;
+}
+
+.u-info span.qntPosts {
+  color: var(--s-color);
+}

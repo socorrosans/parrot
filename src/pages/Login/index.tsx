@@ -25,7 +25,10 @@ export default function Login(){
     .then(r => {
       setToken(r.data.token)
       localStorage.token = token
+      localStorage.id = r.data.id
       localStorage.user = r.data.user
+      localStorage.email = r.data.email
+      localStorage.apartment = r.data.apartment
       if(token != null) window.location.href = "/feed"
     })
     .catch(e => {
