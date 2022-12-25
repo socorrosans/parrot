@@ -7,10 +7,9 @@ import './login.css';
 
 export default function Login(){
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [token, setToken] = useState(null);
-  const [authUser, setAuthUser] = useState(null);
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [authUser, setAuthUser] = useState<string | null>(null);
  
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -23,13 +22,12 @@ export default function Login(){
       }
     })
     .then(r => {
-      setToken(r.data.token)
-      localStorage.token = token
+      localStorage.token = r.data.token
       localStorage.id = r.data.id
       localStorage.user = r.data.user
       localStorage.email = r.data.email
       localStorage.apartment = r.data.apartment
-      if(token != null) window.location.href = "/feed"
+      if(localStorage.token != null) window.location.href = "/feed"
     })
     .catch(e => {
       setAuthUser(e.response.data)
@@ -46,7 +44,7 @@ export default function Login(){
           <h1>LOGIN</h1>
           <form onSubmit={handleSubmit}>
             <input type="email" value={email} placeholder="email" onChange={e => {setEmail(e.target.value); setAuthUser(null)}} />
-            <input type="password" minLength={6} value={password} placeholder="senha" onChange={e => {setPassword(e.target.value); setAuthUser(null)}} />
+            <input type="password" minLength={6} maxLength={8} value={password} placeholder="senha" onChange={e => {setPassword(e.target.value); setAuthUser(null)}} />
             <ButtonLogin />
           </form>
           {authUser? <p>{`${authUser}`}</p>: null}

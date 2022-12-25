@@ -37,7 +37,7 @@ export default function Profile(){
         <User name={localStorage.user} apartment={localStorage.apartment} email={localStorage.email} posts={(posts.length != 0)? String(posts.length) : ""}/>
         <>
         {
-          posts && posts.map(p => <Post owner={p.owner} post={p.post} apartment={p.apartment} created={p.created} />)
+          posts && posts.map((p, i) => <Post key={i} owner={p.owner} post={p.post} apartment={p.apartment} created={p.created} />)
         }
 
         {
