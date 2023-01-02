@@ -8,8 +8,6 @@ interface PropsPost {
   created: string,
 }
 
-// const formatDate = "10/06/2022 09:00"
-
 export default function Post(p: PropsPost){
 
   const createdAt = p.created.split("T").join(" ").slice(0, 16).replace(/-/g, "/");

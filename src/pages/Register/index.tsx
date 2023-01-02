@@ -41,7 +41,7 @@ export default function Register(){
     <Background>
       <section className="container">
         <div>
-          <img src={logo} alt="Logo da Parrot" />
+          <a href="/"><img src={logo} alt="Logo da Parrot" /></a>
         </div>
 
         <h1>CADASTRO</h1>
@@ -51,7 +51,7 @@ export default function Register(){
           <input value={password} minLength={6} maxLength={8} onChange={e => {setPassword(e.target.value); setWrongPassword("")}} type="password" placeholder="senha" />
           <input value={verifyPassword} minLength={6} maxLength={8} onChange={e => {setVerifyPassword(e.target.value); setWrongPassword("")}} type="password" placeholder="confirmar senha" />
           <input value={apartment} maxLength={3} onChange={e => setApartment(e.target.value)} type="text" placeholder="apartamento" />
-          <input value={linkPhoto} onChange={e => setLinkPhoto(e.target.value)} type="text" placeholder="link da foto" />
+          <input value={linkPhoto} onChange={e => setLinkPhoto(e.target.value)} type="text" placeholder="link da foto" style={{"display": "none"}}/>
           <ButtonLogin />
           <>
           {

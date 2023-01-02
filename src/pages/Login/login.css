@@ -48,7 +48,7 @@ input:focus, input:focus{
   align-self: center;
 }
 
-.container a:hover {
+.container a[href="/cadastrar"]:hover {
   color: var(--s-color);
   border-bottom: 1px solid var(--s-color);
   transition: .3s;
