@@ -12,9 +12,9 @@ export default function Register(){
   const [password, setPassword] = useState<string>("");
   const [verifyPassword, setVerifyPassword]= useState<string>("");
   const [apartment, setApartment] = useState<string>("");
-  const [linkPhoto, setLinkPhoto] = useState<string>("")
-  const [wrongPassword, setWrongPassword] = useState<string>("")
-  const [userRegister, setUserRegister] = useState<string>("")
+  const [linkPhoto, setLinkPhoto] = useState<string>("");
+  const [wrongPassword, setWrongPassword] = useState<string>("");
+  const [userRegister, setUserRegister] = useState<string>("");
   
   async function handleSubmit(e: FormEvent){
     e.preventDefault();

@@ -7,16 +7,15 @@ import { api } from '../../services/API';
 import { useEffect, useState } from 'react';
 import './feed.css';
 
+interface Post {
+  owner: string,
+  email: string,
+  apartment: string,
+  post: string,
+  created: string
+}
+
 export default function Feed(){
-
-  interface Post {
-    owner: string,
-    email: string,
-    apartment: string,
-    post: string,
-    created: string
-  }
-
   const [text, setText] = useState("")
   const [posts, setPosts] = useState<Post[]>([]);
   const [emptyPosts, setEmptyPosts] = useState<string>();

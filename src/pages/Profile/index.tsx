@@ -6,16 +6,15 @@ import User from '../../components/User';
 import { api } from '../../services/API';
 import './profile.css';
 
-export default function Profile(){
-  
-  interface Post {
-    owner: string,
-    email: string,
-    apartment: string,
-    post: string,
-    created: string
-  }
+interface Post {
+  owner: string,
+  email: string,
+  apartment: string,
+  post: string,
+  created: string
+}
 
+export default function Profile(){
   const [posts, setPosts] = useState<Post[]>([])
   const [emptyPosts, setEmptyPosts] = useState<string>("")
 
