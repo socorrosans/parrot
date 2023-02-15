@@ -3,6 +3,7 @@ import { ButtonLogin } from '../../components/Buttons';
 import logo from '../../assets/images/logo-box.png';
 import { FormEvent, useState } from 'react';
 import { api } from '../../services/API';
+import { useNavigate } from 'react-router-dom';
 import '../Login/login.css';
 
 export default function Register(){
@@ -15,6 +16,7 @@ export default function Register(){
   const [linkPhoto, setLinkPhoto] = useState<string>("");
   const [wrongPassword, setWrongPassword] = useState<string>("");
   const [userRegister, setUserRegister] = useState<string>("");
+  const navigate = useNavigate();
   
   async function handleSubmit(e: FormEvent){
     e.preventDefault();
@@ -30,7 +32,7 @@ export default function Register(){
           "Content-Type": "application/json; charset=utf-8"
         }
       }).then(r => {
-        window.location.href = "/"
+        navigate("/");
       }).catch(e => setUserRegister(`${e.response.data}, tente um novo email!`))
     } else {
       setWrongPassword("As senhas são diferentes")

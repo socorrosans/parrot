@@ -4,12 +4,14 @@ import logo from '../../assets/images/logo-box.png';
 import { FormEvent, useState } from 'react';
 import { api } from '../../services/API';
 import './login.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login(){
 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [authUser, setAuthUser] = useState<string | null>(null);
+  const navigate = useNavigate();
  
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -27,7 +29,7 @@ export default function Login(){
       localStorage.user = r.data.user
       localStorage.email = r.data.email
       localStorage.apartment = r.data.apartment
-      if(localStorage.token != null) window.location.href = "/feed"
+      if(localStorage.token != null) navigate("/feed");
     })
     .catch(e => {
       setAuthUser(e.response.data)
