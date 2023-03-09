@@ -1,6 +1,6 @@
 @import "../../assets/css/colors.css";
 
-.btnProfile {
+.btn-profile {
   color: #ffffff;
   font-size: 1rem;
   background-color: var(--p-color);
@@ -9,12 +9,12 @@
   border: none;
 }
 
-.btnProfile:hover {
+.btn-profile:hover {
   background-color: var(--p-v-color);
   transition: .3s;
 }
 
-.btnLogin {
+.btn-login {
   color: #ffffff;
   font-size: 1.5rem;
   background-color: var(--p-color);
@@ -23,13 +23,13 @@
   border: none;
 }
 
-.btnLogin:hover {
+.btn-login:hover {
   background-color: var(--p-v-color);
   transition: .3s;
 }
 
 @media (max-width: 450px){
-  .btnLogin {
+  .btn-login {
     font-size: 1.25rem;
   }
 }

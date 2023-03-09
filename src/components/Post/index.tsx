@@ -1,4 +1,4 @@
-import userPic from '../../assets/images/user.png';
+import user from '../../assets/images/user.png';
 import './post.css';
 
 interface PropsPost {
@@ -9,11 +9,10 @@ interface PropsPost {
 }
 
 export default function Post(p: PropsPost){
-
   const createdAt = p.created.split("T").join(" ").slice(0, 16).replace(/-/g, "/");
   return(
     <div className="post">
-      <img src={userPic} alt="Foto de perfil do usuário" />
+      <img src={user} alt="Foto de perfil do usuário" />
       <div className="info-user">
         <h1>{`${p.owner} - apê ${p.apartment}`}</h1>
         <span>{createdAt}</span>

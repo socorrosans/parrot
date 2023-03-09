@@ -1,10 +1,7 @@
-import ContainerMain from '../../components/Containers';
-import Header from '../../components/Header';
-import userPic from '../../assets/images/user.png';
-import { ButtonProfile } from '../../components/Buttons';
-import Post from '../../components/Post';
-import { api } from '../../services/API';
+import {Header, Button, Post, Container} from '../../components';
+import user from '../../assets/images/user.png';
 import { useEffect, useState } from 'react';
+import { api } from '../../services/API';
 import './feed.css';
 
 interface Post {
@@ -18,7 +15,7 @@ interface Post {
 export default function Feed(){
   const [text, setText] = useState("")
   const [posts, setPosts] = useState<Post[]>([]);
-  const [emptyPosts, setEmptyPosts] = useState<string>();
+  const [emptyPosts, setEmptyPosts] = useState("");
 
   useEffect(() => {
     api.get('/feed', {
@@ -27,8 +24,11 @@ export default function Feed(){
       }
     })
       .then(r => {
-        if (typeof r.data == typeof "") {setEmptyPosts(r.data)}
-          else {setPosts(r.data)}
+        if (typeof r.data === "string") {
+          setEmptyPosts(r.data);
+        } else {
+          setPosts(r.data);
+        }
       }).catch(e => console.log(e))
   }, [])
 
@@ -45,13 +45,12 @@ export default function Feed(){
   return(
     <>
       <Header user={localStorage.user}/>
-      <ContainerMain>
+      <Container>
         <div className="post-area">
-          <img src={userPic} alt="Foto de perfil do usuário" />
+          <img src={user} alt="Foto de perfil do usuário" />
           <textarea value={text} onChange={e => setText(e.target.value)}></textarea>
-          <ButtonProfile name="publicar" onclick={handleClick}/>
+          <Button classname="btn-profile" type="submit" name="publicar" onclick={handleClick}/>
         </div>
-        
         <>
         { 
           posts && posts.map((p, i)=> <Post key={i} owner={p.owner} post={p.post} apartment={p.apartment} created={p.created} />)
@@ -60,8 +59,7 @@ export default function Feed(){
           emptyPosts && <p style={{"textAlign": "center", "marginTop": "20px"}}>{emptyPosts}</p>
         }
         </>
-
-      </ContainerMain>
+      </Container>
     </>
   )
 }

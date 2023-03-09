@@ -2,7 +2,7 @@ import logo from '../../assets/images/logo-parrot.png';
 import './header.css';
 
 interface LoggedUser {
-  user: string
+  user: string,
 }
 
 export default function Header(p: LoggedUser){

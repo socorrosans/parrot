@@ -1,17 +1,17 @@
-import userPic from '../../assets/images/user.png';
+import user from '../../assets/images/user.png';
 import './user.css';
 
 interface PropsUser {
   name: string,
   apartment: string,
   email: string,
-  posts?: string
+  posts?: string,
 }
 
 export default function User(p: PropsUser){
   return(
     <div className="user">
-      <img src={userPic} alt="Foto de perfil do usuário"/>
+      <img src={user} alt="Foto de perfil do usuário"/>
       <div className='u-info'>
         <h1>{p.name}</h1>
         <span>{`apê ${p.apartment}`}</span>

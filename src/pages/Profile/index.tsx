@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import ContainerMain from '../../components/Containers';
+import ContainerMain from '../../components/Container';
 import Header from '../../components/Header';
 import Post from '../../components/Post';
 import User from '../../components/User';
@@ -15,8 +15,8 @@ interface Post {
 }
 
 export default function Profile(){
-  const [posts, setPosts] = useState<Post[]>([])
-  const [emptyPosts, setEmptyPosts] = useState<string>("")
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [emptyPosts, setEmptyPosts] = useState("");
 
   useEffect(() => {
     api.get('/user', {
@@ -24,8 +24,11 @@ export default function Profile(){
         "Authorization": localStorage.token
       }
     }).then(r => {
-      if (typeof r.data == typeof "") {setEmptyPosts(r.data)}
-          else {setPosts(r.data)}
+      if (typeof r.data === "string") {
+        setEmptyPosts(r.data);
+      } else {
+        setPosts(r.data);
+      }
     }).catch(e => console.log(e))
   }, [])
 
